@@ -8,11 +8,11 @@ int get_length(char *word) {
     return length;
 }
 
-int handle_get_length(){
+void handle_get_length(){
     int length;
-    printf("%s\n", "Digite uma palavra:");
     char word[100];
     int c;
+    printf("%s\n", "Digite uma palavra:");
     while ((c = getchar()) != '\n' && c != EOF) {}
     fgets(word, sizeof(word), stdin);
     length = get_length(word);
@@ -20,7 +20,6 @@ int handle_get_length(){
         length = length - 1;
     }
     printf("O tamanho da palavra é: %d\n", length);
-    return 0;
 }
 
 int sum_numbers_in_array(int *numbers) {
@@ -32,16 +31,16 @@ int sum_numbers_in_array(int *numbers) {
     return result;
 }
 
-int handle_sum_numbers(){
+void handle_sum_numbers(){
     int numbers[5];
     int i;
+    int result;
     printf("%s\n", "Digite 5 números separados por espaço:");
     for(i = 0; i < 5; i++){
         scanf("%d", &numbers[i]);
     }
-    int result = sum_numbers_in_array(numbers);
+    result = sum_numbers_in_array(numbers);
     printf("A soma dos números é: %d\n", result);
-    return 0;
 }
 
 int fatorial(int number) {
@@ -51,13 +50,13 @@ int fatorial(int number) {
     return number * fatorial(number - 1);
 }
 
-int handle_fatorial(){
+void handle_fatorial(){
     int number;
+    int f;
     printf("%s\n", "Digite um número:");
     scanf("%d", &number);
-    int f = fatorial(number);
+    f = fatorial(number);
     printf("O fatorial de %d é: %d\n", number, f);
-    return 0;
 }
 
 int is_prime(int number) {
@@ -72,27 +71,26 @@ int is_prime(int number) {
     return prime;
 }
 
-int handle_is_prime(){
+void handle_is_prime(){
     int number;
+    int prime;
     printf("%s\n", "Digite um número:");
     scanf("%d", &number);
-    int prime = is_prime(number);
+    prime = is_prime(number);
     if(prime){
         printf("%d é primo\n", number);
     }else{
         printf("%d não é primo\n", number);
     }
-    return 0;
 }
 
-int show_options() {
+void show_options() {
     printf("%s\n", "Selecione uma das opções abaixo:");
     printf("%s\n", "1 - Contar o tamanho de uma palavra");
     printf("%s\n", "2 - Somar 5 números");
     printf("%s\n", "3 - Calcular o fatorial de um número");
     printf("%s\n", "4 - Verificar se um número é primo");
     printf("%s\n", "5 - Sair");
-    return 0;
 }
 
 int handle_options() {
