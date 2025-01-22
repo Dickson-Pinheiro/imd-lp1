@@ -4,9 +4,15 @@
 #include <string>
 #include "City.h"
 
-enum class TransportType { Terrestre, Aquatico, Aereo };
+enum class TransportType
+{
+    Terrestre,
+    Aquatico,
+    Aereo
+};
 
-class Transport {
+class Transport
+{
 private:
     std::string name;
     TransportType type;
@@ -15,10 +21,10 @@ private:
     int distanceBetweenRests;
     int restTime;
     int currentRestTime;
-    City* currentCity;
+    City *currentCity;
 
 public:
-    Transport(const std::string& name, TransportType type, int capacity, int speed, int distanceRest, int restTime, City* city);
+    Transport(const std::string &name, TransportType type, int capacity, int speed, int distanceRest, int restTime, City *city);
     std::string getName() const;
     TransportType getType() const;
     int getPassengerCapacity() const;
@@ -26,14 +32,14 @@ public:
     int getDistanceBetweenRests() const;
     int getRestTime() const;
     int getCurrentRestTime() const;
-    City* getCurrentCity() const;
-    void setName(const std::string& name);
+    City *getCurrentCity() const;
+    void setName(const std::string &name);
     void setType(TransportType type);
     void setPassengerCapacity(int capacity);
     void setSpeed(int speed);
     void setDistanceBetweenRests(int distanceRest);
     void setRestTime(int restTime);
-    void setCurrentCity(City* city);
+    void setCurrentCity(City *city);
     void setCurrentRestTime(int restTime);
 };
 

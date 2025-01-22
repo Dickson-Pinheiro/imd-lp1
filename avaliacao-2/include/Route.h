@@ -4,32 +4,33 @@
 #include <string>
 #include "City.h"
 
-enum RouteType {
+enum RouteType
+{
     Aquatico,
-    Terrestre
+    Terrestre,
+    Aereo
 };
 
-class Route {
+class Route
+{
 private:
-    City* startCity;
-    City* endCity;
+    City *startCity;
+    City *endCity;
     RouteType routeType;
     int distance;
 
 public:
-    Route(City* start, City* end, RouteType type, int distance);
-    
-    City* getStartCity() const;
-    City* getEndCity() const;
+    Route(City *start, City *end, RouteType type, int distance);
+
+    City *getStartCity() const;
+    City *getEndCity() const;
     RouteType getRouteType() const;
     int getDistance() const;
 
-
-    void setStartCity(City* start);
-    void setEndCity(City* end);
+    void setStartCity(City *start);
+    void setEndCity(City *end);
     void setRouteType(RouteType type);
     void setDistance(int distance);
-
 };
 
 #endif
