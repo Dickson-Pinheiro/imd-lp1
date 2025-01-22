@@ -56,7 +56,7 @@ A aplicação oferece as seguintes opções:
 **Parâmetros:** Nenhum.
 .
 
-## Contribuição
+## Configuração
 compilação:
 ```
  g++ -I./include -o main main.cpp include/City.cpp include/Transport.cpp include/Passenger.cpp include/Route.cpp include/Travel.cpp include/Traffic_Controller.cpp
